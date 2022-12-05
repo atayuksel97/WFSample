@@ -1,0 +1,38 @@
+﻿// Fill out your copyright notice in the Description page of Project Settings.
+
+#pragma once
+
+#include "CoreMinimal.h"
+#include "UAIAction.h"
+#include "UAIAction_Shoot.generated.h"
+
+class AUAIAICharacter;
+
+UCLASS(DisplayName= "Action_Shoot")
+class UAISAMPLE_API UUAIAction_Shoot : public UUAIAction
+{
+	GENERATED_BODY()
+
+	// CTOR/DTOR & VIRTUAL FUNCTIONS
+public:
+	UUAIAction_Shoot();
+	virtual void OnBeginPlay_Implementation() override;
+	virtual void OnActivate_Implementation() override;
+	virtual void TickAction_Implementation(float DeltaTime) override;
+	virtual void OnDeactivate_Implementation() override;
+	virtual void OnUpdateTargets_Implementation() override;
+
+	// PROPERTIES
+public:
+	/** Sphere overlap radius for finding targets */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "Action_MoveToTargetActor")
+	float SphereRadius;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "Action_MoveToTargetActor")
+	TSubclassOf<AActor> ActorClassFilter;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "Action_MoveToTargetActor")
+	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypesQuery;
+
+	TWeakObjectPtr<AUAIAICharacter> Character;
+};
