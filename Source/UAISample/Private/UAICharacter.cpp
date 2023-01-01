@@ -58,7 +58,7 @@ void AUAICharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompon
 
 void AUAICharacter::Fire()
 {
-	if (Weapon)
+	if (IsValid(Weapon))
 		Weapon->StartFire();
 }
 
@@ -66,7 +66,7 @@ void AUAICharacter::Fire()
 
 void AUAICharacter::StopFire()
 {
-	if (Weapon)
+	if (IsValid(Weapon))
 		Weapon->EndFire();
 }
 
@@ -74,7 +74,7 @@ void AUAICharacter::StopFire()
 
 void AUAICharacter::ReloadWeapon()
 {
-	if (Weapon)
+	if (IsValid(Weapon))
 		Weapon->StartReloadClip();
 }
 
