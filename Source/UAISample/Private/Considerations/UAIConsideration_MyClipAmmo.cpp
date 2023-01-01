@@ -19,7 +19,7 @@ float UUAIConsideration_MyClipAmmo::GetValue_Implementation(const AActor* InTarg
 {
 	if (Character.IsValid() && IsValid(Character->Weapon))
 	{
-		return Character->Weapon->ClipBulletNum / Character->Weapon->ClipSize;
+		return static_cast<float>(Character->Weapon->ClipBulletNum) / static_cast<float>(Character->Weapon->ClipSize);
 	}
 
 	return 0.0f;
