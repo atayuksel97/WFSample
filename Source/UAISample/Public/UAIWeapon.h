@@ -38,7 +38,7 @@ public:
 
 private:
 	void Shoot();
-	void UUAIateAimLocation();
+	void CalculateAimLocation();
 	void DrawAim() const;
 	void DrawShoot(FVector HitLocation, const bool bIsTargetShot) const;
 	void DrawImpact(FVector HitLocation, const bool bIsTargetShot) const;

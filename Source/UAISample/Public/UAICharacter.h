@@ -31,6 +31,12 @@ public:
 protected:
 	virtual void BeginPlay() override;
 
+	// FUNCTIONS
+public:
+	UFUNCTION(BlueprintNativeEvent, Category= "UAICharacter")
+	void OnDied();
+	void OnDied_Implementation();
+
 	// PROPERTIES
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "UAICharacter")

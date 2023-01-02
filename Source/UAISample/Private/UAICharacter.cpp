@@ -31,6 +31,8 @@ void AUAICharacter::BeginPlay()
 	FActorSpawnParameters SpawnParameters;
 	SpawnParameters.Owner = this;
 	Weapon = GetWorld()->SpawnActor<AUAIWeapon>(WeaponClass ? *WeaponClass : AUAIWeapon::StaticClass(), SpawnParameters);
+
+	HealthComp->OnDiedEvent.AddDynamic(this, &AUAICharacter::OnDied);
 }
 
 //---------------------------------------------------------------------------------------
@@ -87,4 +89,14 @@ void AUAICharacter::Pickup()
 		OverlappedPickup->OnUsed(this);
 		OverlappedPickup = nullptr;
 	}
+}
+
+//---------------------------------------------------------------------------------------
+// FUNCTIONS
+//---------------------------------------------------------------------------------------
+
+void AUAICharacter::OnDied_Implementation()
+{
+	Weapon->Destroy();
+	Destroy();
 }

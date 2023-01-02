@@ -33,13 +33,14 @@ public:
 	FORCEINLINE float GetMaxHealth() const { return MaxHealth; }
 
 	// PROPERTIES
+public:
+	UPROPERTY(BlueprintAssignable, Category= "UAIHealthComponent")
+	FOnDied OnDiedEvent;
+	
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "UAIHealthComponent", meta=(AllowPrivateAccess= "true"))
 	float Health;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "UAIHealthComponent", meta=(AllowPrivateAccess= "true"))
 	float MaxHealth;
-
-	UPROPERTY(BlueprintAssignable, Category= "UAIHealthComponent")
-	FOnDied OnDiedEvent;
 };

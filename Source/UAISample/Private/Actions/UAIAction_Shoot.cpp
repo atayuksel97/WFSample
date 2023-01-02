@@ -53,6 +53,7 @@ void UUAIAction_Shoot::TickAction_Implementation(float DeltaTime)
 
 void UUAIAction_Shoot::OnDeactivate_Implementation()
 {
+	if(IsValid(Character.Get()))
 	Character->StopFire();
 }
 

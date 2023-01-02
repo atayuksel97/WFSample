@@ -76,7 +76,7 @@ void AUAIWeapon::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	UUAIateAimLocation();
+	CalculateAimLocation();
 
 	if (bShouldDrawAim)
 		DrawAim();
@@ -169,16 +169,19 @@ void AUAIWeapon::Shoot()
 
 //---------------------------------------------------------------------------------------
 
-void AUAIWeapon::UUAIateAimLocation()
+void AUAIWeapon::CalculateAimLocation()
 {
-	AimStartLocation = SkeletalMeshComp->GetSocketLocation(MuzzleSocketName);
+	if(IsValid(OwnerCharacter.Get()))
+	{
+		AimStartLocation = SkeletalMeshComp->GetSocketLocation(MuzzleSocketName);
 
-	FVector EyesLocation;
-	FRotator EyesRotation;
-	OwnerCharacter->GetActorEyesViewPoint(EyesLocation, EyesRotation);
-	const FVector AimDirection = EyesRotation.Vector();
+		FVector EyesLocation;
+		FRotator EyesRotation;
+		OwnerCharacter->GetActorEyesViewPoint(EyesLocation, EyesRotation);
+		const FVector AimDirection = EyesRotation.Vector();
 
-	AimEndLocation = EyesLocation + (AimDirection * BulletMaxDistance);
+		AimEndLocation = EyesLocation + (AimDirection * BulletMaxDistance);
+	}
 }
 
 //---------------------------------------------------------------------------------------
