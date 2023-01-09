@@ -3,6 +3,7 @@
 #include "Actions/UAIAction_MoveToTargetActor.h"
 #include "NavFilters/NavigationQueryFilter.h"
 #include "AIController.h"
+#include "UAISampleTypes.h"
 #include "Kismet/KismetSystemLibrary.h"
 
 //---------------------------------------------------------------------------------------
@@ -37,6 +38,8 @@ void UUAIAction_MoveToTargetActor::OnActivate_Implementation()
 
 void UUAIAction_MoveToTargetActor::TickAction_Implementation(float DeltaTime)
 {
+	UAISAMPLE_TRACE_FUNCTION()
+	
 	if (IsValid(TargetActor))
 	{
 		const EPathFollowingRequestResult::Type Result = GetAIController()->MoveToActor(TargetActor.Get(), AcceptanceRadius, bStopOnOverlap, bUsePathfinding, bCanStrafe,
@@ -62,8 +65,10 @@ void UUAIAction_MoveToTargetActor::OnDeactivate_Implementation()
 
 void UUAIAction_MoveToTargetActor::OnUpdateTargets_Implementation()
 {
-	ClearTargetActors();
+	UAISAMPLE_TRACE_FUNCTION()
+	
+	TargetActors.Reset();
 	TArray<AActor*> OutActors;
 	UKismetSystemLibrary::SphereOverlapActors(GetWorld(), GetPawn()->GetActorLocation(), SphereRadius, ObjectTypesQuery, ActorClassFilter, TArray<AActor*>{GetPawn()}, OutActors);
-	AddTargetActors(OutActors);
+	TargetActors.Append(OutActors);
 }

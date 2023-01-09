@@ -2,10 +2,9 @@
 
 #include "Actions/UAIAction_Shoot.h"
 #include "UAIAICharacter.h"
-#include "UAIAIController.h"
+#include "UAISampleTypes.h"
 #include "UAIWeapon.h"
 #include "Kismet/KismetSystemLibrary.h"
-#include "Perception/AIPerceptionComponent.h"
 
 //---------------------------------------------------------------------------------------
 // CTOR/DTOR & VIRTUAL FUNCTIONS
@@ -33,6 +32,8 @@ void UUAIAction_Shoot::OnActivate_Implementation()
 
 void UUAIAction_Shoot::TickAction_Implementation(float DeltaTime)
 {
+	UAISAMPLE_TRACE_FUNCTION()
+	
 	if (IsValid(TargetActor) && IsValid(Character.Get()) && IsValid(Character->Weapon.Get()) && Character->Weapon->ClipBulletNum > 0)
 	{
 		const FRotator Rotation = (TargetActor->GetActorLocation() - Character->GetActorLocation()).Rotation();
@@ -61,8 +62,10 @@ void UUAIAction_Shoot::OnDeactivate_Implementation()
 
 void UUAIAction_Shoot::OnUpdateTargets_Implementation()
 {
-	ClearTargetActors();
+	UAISAMPLE_TRACE_FUNCTION()
+	
+	TargetActors.Reset();
 	TArray<AActor*> OutActors;
 	UKismetSystemLibrary::SphereOverlapActors(GetWorld(), GetPawn()->GetActorLocation(), SphereRadius, ObjectTypesQuery, ActorClassFilter, TArray<AActor*>{GetPawn()}, OutActors);
-	AddTargetActors(OutActors);
+	TargetActors.Append(OutActors);
 }

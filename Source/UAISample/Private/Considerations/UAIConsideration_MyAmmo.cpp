@@ -2,6 +2,7 @@
 
 #include "Considerations/UAIConsideration_MyAmmo.h"
 #include "UAICharacter.h"
+#include "UAISampleTypes.h"
 #include "UAIWeapon.h"
 
 //---------------------------------------------------------------------------------------
@@ -17,6 +18,8 @@ void UUAIConsideration_MyAmmo::OnBeginPlay_Implementation()
 
 float UUAIConsideration_MyAmmo::GetValue_Implementation(const AActor* InTargetActor)
 {
+	UAISAMPLE_TRACE_FUNCTION()
+	
 	if (IsValid(Character.Get()) && IsValid(Character->Weapon.Get()))
 	{
 		const float TotalBullets = Character->Weapon->TotalBullets;

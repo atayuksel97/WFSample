@@ -3,6 +3,7 @@
 #include "Considerations/UAIConsideration_MyHealth.h"
 #include "UAICharacter.h"
 #include "UAIHealthComponent.h"
+#include "UAISampleTypes.h"
 
 //---------------------------------------------------------------------------------------
 // CTOR/DTOR & VIRTUAL FUNCTIONS
@@ -17,6 +18,8 @@ void UUAIConsideration_MyHealth::OnBeginPlay_Implementation()
 
 float UUAIConsideration_MyHealth::GetValue_Implementation(const AActor* InTargetActor)
 {
+	UAISAMPLE_TRACE_FUNCTION()
+	
 	if (HealthComp.IsValid())
 	{
 		return HealthComp->GetHealth() / HealthComp->GetMaxHealth();

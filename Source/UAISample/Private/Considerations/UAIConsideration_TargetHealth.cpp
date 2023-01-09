@@ -4,6 +4,7 @@
 #include "Considerations/UAIConsideration_TargetHealth.h"
 #include "UAICharacter.h"
 #include "UAIHealthComponent.h"
+#include "UAISampleTypes.h"
 
 //---------------------------------------------------------------------------------------
 // CTOR/DTOR & VIRTUAL FUNCTIONS
@@ -18,6 +19,8 @@ void UUAIConsideration_TargetHealth::OnBeginPlay_Implementation()
 
 float UUAIConsideration_TargetHealth::GetValue_Implementation(const AActor* InTargetActor)
 {
+	UAISAMPLE_TRACE_FUNCTION()
+	
 	if (IsValid(InTargetActor))
 	{
 		if (const AUAICharacter* Character = Cast<AUAICharacter>(InTargetActor))

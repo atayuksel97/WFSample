@@ -3,6 +3,7 @@
 
 #include "Actions/UAIAction_Pickup.h"
 #include "UAICharacter.h"
+#include "UAISampleTypes.h"
 
 //---------------------------------------------------------------------------------------
 // CTOR/DTOR & VIRTUAL FUNCTIONS
@@ -17,6 +18,8 @@ void UUAIAction_Pickup::OnBeginPlay_Implementation()
 
 void UUAIAction_Pickup::OnActivate_Implementation()
 {
+	UAISAMPLE_TRACE_FUNCTION()
+	
 	if (IsValid(Character.Get()))
 	{
 		Character->Pickup();

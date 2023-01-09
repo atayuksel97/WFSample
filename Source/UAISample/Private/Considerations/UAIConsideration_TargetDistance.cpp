@@ -4,6 +4,7 @@
 #include "Considerations/UAIConsideration_TargetDistance.h"
 
 #include "AIController.h"
+#include "UAISampleTypes.h"
 
 //---------------------------------------------------------------------------------------
 // CTOR/DTOR & VIRTUAL FUNCTIONS
@@ -17,6 +18,8 @@ void UUAIConsideration_TargetDistance::OnBeginPlay_Implementation()
 
 float UUAIConsideration_TargetDistance::GetValue_Implementation(const AActor* InTargetActor)
 {
+	UAISAMPLE_TRACE_FUNCTION()
+	
 	if (IsValid(InTargetActor) && IsValid(GetPawn()))
 	{
 		return GetPawn()->GetDistanceTo(InTargetActor) / MaxDistance;
