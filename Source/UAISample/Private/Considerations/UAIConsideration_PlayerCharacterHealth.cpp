@@ -12,7 +12,7 @@
 
 float UUAIConsideration_PlayerCharacterHealth::GetValue_Implementation(const AActor* InTargetActor)
 {
-	UAISAMPLE_TRACE_FUNCTION()
+	TRACE_CPUPROFILER_EVENT_SCOPE(UUAIConsideration_PlayerCharacterHealth::GetValue_Implementation)
 	
 	if (const AUAIPlayerCharacter* PlayerCharacter = Cast<AUAIPlayerCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0)))
 	{

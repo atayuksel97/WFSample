@@ -18,7 +18,7 @@ void UUAIConsideration_MyHealth::OnBeginPlay_Implementation()
 
 float UUAIConsideration_MyHealth::GetValue_Implementation(const AActor* InTargetActor)
 {
-	UAISAMPLE_TRACE_FUNCTION()
+	TRACE_CPUPROFILER_EVENT_SCOPE(UUAIConsideration_MyHealth::GetValue_Implementation)
 	
 	if (HealthComp.IsValid())
 	{

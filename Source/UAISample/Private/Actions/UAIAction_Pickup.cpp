@@ -18,7 +18,7 @@ void UUAIAction_Pickup::OnBeginPlay_Implementation()
 
 void UUAIAction_Pickup::OnActivate_Implementation()
 {
-	UAISAMPLE_TRACE_FUNCTION()
+	TRACE_CPUPROFILER_EVENT_SCOPE(UUAIAction_Pickup::OnActivate_Implementation)
 	
 	if (IsValid(Character.Get()))
 	{

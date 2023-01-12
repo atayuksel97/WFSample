@@ -26,7 +26,7 @@ void UUAIAction_MoveToCover::OnActivate_Implementation()
 void UUAIAction_MoveToCover::TickAction_Implementation(float DeltaTime)
 {
 	// DECLARE_SCOPE_CYCLE_COUNTER(TEXT("UUAIAction_MoveToCover::TickAction_Implementation"), STAT_UUAIAction_MoveToCover_TickAction_Implementation, STATGROUP_UAISample);
-	UAISAMPLE_TRACE_FUNCTION()
+	TRACE_CPUPROFILER_EVENT_SCOPE(UUAIAction_MoveToCover::TickAction_Implementation)
 	
 	FEnvQueryRequest HidingSpotQueryRequest = FEnvQueryRequest(EnvQuery, GetPawn());
 	HidingSpotQueryRequest.Execute(EEnvQueryRunMode::AllMatching, this, &UUAIAction_MoveToCover::MoveToQueryResult);
@@ -57,7 +57,7 @@ void UUAIAction_MoveToCover::OnUpdateTargets_Implementation()
 
 void UUAIAction_MoveToCover::MoveToQueryResult(TSharedPtr<FEnvQueryResult> Result)
 {
-	UAISAMPLE_TRACE_FUNCTION()
+	TRACE_CPUPROFILER_EVENT_SCOPE(UUAIAction_MoveToCover::MoveToQueryResult)
 	
 	if (Result->IsSuccessful())
 	{

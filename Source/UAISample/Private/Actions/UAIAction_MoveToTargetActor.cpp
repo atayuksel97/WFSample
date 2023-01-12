@@ -38,7 +38,7 @@ void UUAIAction_MoveToTargetActor::OnActivate_Implementation()
 
 void UUAIAction_MoveToTargetActor::TickAction_Implementation(float DeltaTime)
 {
-	UAISAMPLE_TRACE_FUNCTION()
+	TRACE_CPUPROFILER_EVENT_SCOPE(UUAIAction_MoveToTargetActor::TickAction_Implementation)
 	
 	if (IsValid(TargetActor))
 	{
@@ -65,7 +65,7 @@ void UUAIAction_MoveToTargetActor::OnDeactivate_Implementation()
 
 void UUAIAction_MoveToTargetActor::OnUpdateTargets_Implementation()
 {
-	UAISAMPLE_TRACE_FUNCTION()
+	TRACE_CPUPROFILER_EVENT_SCOPE(UUAIAction_MoveToTargetActor::OnUpdateTargets_Implementation)
 	
 	TargetActors.Reset();
 	TArray<AActor*> OutActors;

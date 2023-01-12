@@ -18,7 +18,7 @@ void UUAIConsideration_OverlappingPickup::OnBeginPlay_Implementation()
 
 float UUAIConsideration_OverlappingPickup::GetValue_Implementation(const AActor* InTargetActor)
 {
-	UAISAMPLE_TRACE_FUNCTION()
+	TRACE_CPUPROFILER_EVENT_SCOPE(UUAIConsideration_OverlappingPickup::GetValue_Implementation)
 	
 	if (IsValid(Character.Get()) && IsValid(Character->OverlappedPickup.Get()))
 		return 1.0f;

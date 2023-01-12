@@ -32,7 +32,7 @@ void UUAIAction_Shoot::OnActivate_Implementation()
 
 void UUAIAction_Shoot::TickAction_Implementation(float DeltaTime)
 {
-	UAISAMPLE_TRACE_FUNCTION()
+	TRACE_CPUPROFILER_EVENT_SCOPE(UUAIAction_Shoot::TickAction_Implementation)
 	
 	if (IsValid(TargetActor) && IsValid(Character.Get()) && IsValid(Character->Weapon.Get()) && Character->Weapon->ClipBulletNum > 0)
 	{
@@ -62,7 +62,7 @@ void UUAIAction_Shoot::OnDeactivate_Implementation()
 
 void UUAIAction_Shoot::OnUpdateTargets_Implementation()
 {
-	UAISAMPLE_TRACE_FUNCTION()
+	TRACE_CPUPROFILER_EVENT_SCOPE(UUAIAction_Shoot::OnUpdateTargets_Implementation)
 	
 	TargetActors.Reset();
 	TArray<AActor*> OutActors;

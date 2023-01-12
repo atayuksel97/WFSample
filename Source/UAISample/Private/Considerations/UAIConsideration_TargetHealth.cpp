@@ -19,7 +19,7 @@ void UUAIConsideration_TargetHealth::OnBeginPlay_Implementation()
 
 float UUAIConsideration_TargetHealth::GetValue_Implementation(const AActor* InTargetActor)
 {
-	UAISAMPLE_TRACE_FUNCTION()
+	TRACE_CPUPROFILER_EVENT_SCOPE(UUAIConsideration_TargetHealth::GetValue_Implementation)
 	
 	if (IsValid(InTargetActor))
 	{

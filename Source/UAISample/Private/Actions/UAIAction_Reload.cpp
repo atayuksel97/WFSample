@@ -18,7 +18,7 @@ void UUAIAction_Reload::OnBeginPlay_Implementation()
 
 void UUAIAction_Reload::OnActivate_Implementation()
 {
-	UAISAMPLE_TRACE_FUNCTION()
+	TRACE_CPUPROFILER_EVENT_SCOPE(UUAIAction_Reload::OnActivate_Implementation)
 	
 	const AUAICharacter* Character = Cast<AUAICharacter>(GetPawn());
 	if (IsValid(Character) && IsValid(Character->Weapon))
@@ -29,7 +29,7 @@ void UUAIAction_Reload::OnActivate_Implementation()
 
 void UUAIAction_Reload::TickAction_Implementation(float DeltaTime)
 {
-	UAISAMPLE_TRACE_FUNCTION()
+	TRACE_CPUPROFILER_EVENT_SCOPE(UUAIAction_Reload::TickAction_Implementation)
 	
 	const AUAICharacter* Character = Cast<AUAICharacter>(GetPawn());
 	if (IsValid(Character) && IsValid(Character->Weapon) && Character->Weapon->State != EWeaponState::RELOADING)

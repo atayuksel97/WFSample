@@ -18,7 +18,7 @@ void UUAIConsideration_MyAmmo::OnBeginPlay_Implementation()
 
 float UUAIConsideration_MyAmmo::GetValue_Implementation(const AActor* InTargetActor)
 {
-	UAISAMPLE_TRACE_FUNCTION()
+	TRACE_CPUPROFILER_EVENT_SCOPE(UUAIConsideration_MyAmmo::GetValue_Implementation)
 	
 	if (IsValid(Character.Get()) && IsValid(Character->Weapon.Get()))
 	{
