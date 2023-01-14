@@ -16,7 +16,6 @@ class UAISAMPLE_API UUAIConsideration_OverlappingPickup : public UUAIConsiderati
 public:
 	virtual void OnBeginPlay_Implementation() override;
 	virtual float GetValue_Implementation(const AActor* InTargetActor) override;
-	virtual bool IsNeededTarget_Implementation() const override;
 
 	// PROPERTIES
 public:

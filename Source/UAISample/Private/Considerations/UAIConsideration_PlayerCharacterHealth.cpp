@@ -21,10 +21,3 @@ float UUAIConsideration_PlayerCharacterHealth::GetValue_Implementation(const AAc
 
 	return 0.0f;
 }
-
-//---------------------------------------------------------------------------------------
-
-bool UUAIConsideration_PlayerCharacterHealth::IsNeededTarget_Implementation() const
-{
-	return false;
-}

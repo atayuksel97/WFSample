@@ -15,7 +15,6 @@ class UAISAMPLE_API UUAIConsideration_TargetHealth : public UUAIConsideration
 
 	// CTOR/DTOR & VIRTUAL FUNCTIONS
 public:
-	virtual void OnBeginPlay_Implementation() override;
 	virtual float GetValue_Implementation(const AActor* InTargetActor) override;
 	virtual bool IsNeededTarget_Implementation() const override;
 };

@@ -15,5 +15,4 @@ class UAISAMPLE_API UUAIConsideration_PlayerCharacterHealth : public UUAIConside
 	// CTOR/DTOR & VIRTUAL FUNCTIONS
 public:
 	virtual float GetValue_Implementation(const AActor* InTargetActor) override;
-	virtual bool IsNeededTarget_Implementation() const override;
 };

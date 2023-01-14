@@ -10,13 +10,6 @@
 // CTOR/DTOR & VIRTUAL FUNCTIONS
 //---------------------------------------------------------------------------------------
 
-void UUAIConsideration_TargetHealth::OnBeginPlay_Implementation()
-{
-	Super::OnBeginPlay_Implementation();
-}
-
-//---------------------------------------------------------------------------------------
-
 float UUAIConsideration_TargetHealth::GetValue_Implementation(const AActor* InTargetActor)
 {
 	TRACE_CPUPROFILER_EVENT_SCOPE(UUAIConsideration_TargetHealth::GetValue_Implementation)

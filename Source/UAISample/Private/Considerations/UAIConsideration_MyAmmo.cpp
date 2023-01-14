@@ -11,6 +11,7 @@
 
 void UUAIConsideration_MyAmmo::OnBeginPlay_Implementation()
 {
+	Super::OnBeginPlay_Implementation();
 	Character = Cast<AUAICharacter>(GetControlledActor());
 }
 
@@ -19,7 +20,7 @@ void UUAIConsideration_MyAmmo::OnBeginPlay_Implementation()
 float UUAIConsideration_MyAmmo::GetValue_Implementation(const AActor* InTargetActor)
 {
 	TRACE_CPUPROFILER_EVENT_SCOPE(UUAIConsideration_MyAmmo::GetValue_Implementation)
-	
+
 	if (IsValid(Character.Get()) && IsValid(Character->Weapon.Get()))
 	{
 		const float TotalBullets = Character->Weapon->TotalBullets;
@@ -29,11 +30,4 @@ float UUAIConsideration_MyAmmo::GetValue_Implementation(const AActor* InTargetAc
 	}
 
 	return 0.0f;
-}
-
-//---------------------------------------------------------------------------------------
-
-bool UUAIConsideration_MyAmmo::IsNeededTarget_Implementation() const
-{
-	return false;
 }

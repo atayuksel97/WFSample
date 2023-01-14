@@ -11,6 +11,7 @@
 
 void UUAIConsideration_MyHealth::OnBeginPlay_Implementation()
 {
+	Super::OnBeginPlay_Implementation();
 	HealthComp = Cast<AUAICharacter>(GetControlledActor())->HealthComp;
 }
 
@@ -26,11 +27,4 @@ float UUAIConsideration_MyHealth::GetValue_Implementation(const AActor* InTarget
 	}
 
 	return 0.0f;
-}
-
-//---------------------------------------------------------------------------------------
-
-bool UUAIConsideration_MyHealth::IsNeededTarget_Implementation() const
-{
-	return false;
 }

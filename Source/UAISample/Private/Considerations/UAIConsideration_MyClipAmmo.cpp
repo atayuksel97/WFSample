@@ -11,6 +11,7 @@
 
 void UUAIConsideration_MyClipAmmo::OnBeginPlay_Implementation()
 {
+	Super::OnBeginPlay_Implementation();
 	Character = Cast<AUAICharacter>(GetControlledActor());
 }
 
@@ -26,11 +27,4 @@ float UUAIConsideration_MyClipAmmo::GetValue_Implementation(const AActor* InTarg
 	}
 
 	return 0.0f;
-}
-
-//---------------------------------------------------------------------------------------
-
-bool UUAIConsideration_MyClipAmmo::IsNeededTarget_Implementation() const
-{
-	return false;
 }

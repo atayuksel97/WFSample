@@ -10,12 +10,6 @@
 // CTOR/DTOR & VIRTUAL FUNCTIONS
 //---------------------------------------------------------------------------------------
 
-void UUAIConsideration_TargetDistance::OnBeginPlay_Implementation()
-{
-}
-
-//---------------------------------------------------------------------------------------
-
 float UUAIConsideration_TargetDistance::GetValue_Implementation(const AActor* InTargetActor)
 {
 	TRACE_CPUPROFILER_EVENT_SCOPE(UUAIConsideration_TargetDistance::GetValue_Implementation)

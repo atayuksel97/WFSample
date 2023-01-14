@@ -17,7 +17,6 @@ class UAISAMPLE_API UUAIConsideration_MyAmmo : public UUAIConsideration
 public:
 	virtual void OnBeginPlay_Implementation() override;
 	virtual float GetValue_Implementation(const AActor* InTargetActor) override;
-	virtual bool IsNeededTarget_Implementation() const override;
 
 	// PROPERTIES
 private:

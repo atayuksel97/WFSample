@@ -11,6 +11,7 @@
 
 void UUAIConsideration_OverlappingPickup::OnBeginPlay_Implementation()
 {
+	Super::OnBeginPlay_Implementation();
 	Character = Cast<AUAICharacter>(GetControlledActor());
 }
 
@@ -24,11 +25,4 @@ float UUAIConsideration_OverlappingPickup::GetValue_Implementation(const AActor*
 		return 1.0f;
 
 	return 0.0f;
-}
-
-//---------------------------------------------------------------------------------------
-
-bool UUAIConsideration_OverlappingPickup::IsNeededTarget_Implementation() const
-{
-	return false;
 }
