@@ -20,9 +20,9 @@ float UUAIConsideration_TargetDistance::GetValue_Implementation(const AActor* In
 {
 	TRACE_CPUPROFILER_EVENT_SCOPE(UUAIConsideration_TargetDistance::GetValue_Implementation)
 	
-	if (IsValid(InTargetActor) && IsValid(GetPawn()))
+	if (IsValid(InTargetActor) && IsValid(GetControlledActor()))
 	{
-		return GetPawn()->GetDistanceTo(InTargetActor) / MaxDistance;
+		return GetControlledActor()->GetDistanceTo(InTargetActor) / MaxDistance;
 	}
 	return 0.0f;
 }

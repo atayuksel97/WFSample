@@ -11,7 +11,7 @@
 
 void UUAIConsideration_MyHealth::OnBeginPlay_Implementation()
 {
-	HealthComp = Cast<AUAICharacter>(GetPawn())->HealthComp;
+	HealthComp = Cast<AUAICharacter>(GetControlledActor())->HealthComp;
 }
 
 //---------------------------------------------------------------------------------------

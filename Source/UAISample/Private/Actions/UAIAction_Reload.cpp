@@ -20,7 +20,7 @@ void UUAIAction_Reload::OnActivate_Implementation()
 {
 	TRACE_CPUPROFILER_EVENT_SCOPE(UUAIAction_Reload::OnActivate_Implementation)
 	
-	const AUAICharacter* Character = Cast<AUAICharacter>(GetPawn());
+	const AUAICharacter* Character = Cast<AUAICharacter>(GetControlledActor());
 	if (IsValid(Character) && IsValid(Character->Weapon))
 		Character->Weapon->StartReloadClip();
 }
@@ -31,7 +31,7 @@ void UUAIAction_Reload::TickAction_Implementation(float DeltaTime)
 {
 	TRACE_CPUPROFILER_EVENT_SCOPE(UUAIAction_Reload::TickAction_Implementation)
 	
-	const AUAICharacter* Character = Cast<AUAICharacter>(GetPawn());
+	const AUAICharacter* Character = Cast<AUAICharacter>(GetControlledActor());
 	if (IsValid(Character) && IsValid(Character->Weapon) && Character->Weapon->State != EWeaponState::RELOADING)
 	{
 		Finished();

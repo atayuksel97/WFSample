@@ -11,7 +11,7 @@
 
 void UUAIConsideration_OverlappingPickup::OnBeginPlay_Implementation()
 {
-	Character = Cast<AUAICharacter>(GetPawn());
+	Character = Cast<AUAICharacter>(GetControlledActor());
 }
 
 //---------------------------------------------------------------------------------------

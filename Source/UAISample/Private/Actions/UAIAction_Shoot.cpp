@@ -19,7 +19,7 @@ UUAIAction_Shoot::UUAIAction_Shoot()
 
 void UUAIAction_Shoot::OnBeginPlay_Implementation()
 {
-	Character = Cast<AUAIAICharacter>(GetPawn());
+	Character = Cast<AUAIAICharacter>(GetControlledActor());
 }
 
 //---------------------------------------------------------------------------------------
@@ -66,6 +66,6 @@ void UUAIAction_Shoot::OnUpdateTargets_Implementation()
 	
 	TargetActors.Reset();
 	TArray<AActor*> OutActors;
-	UKismetSystemLibrary::SphereOverlapActors(GetWorld(), GetPawn()->GetActorLocation(), SphereRadius, ObjectTypesQuery, ActorClassFilter, TArray<AActor*>{GetPawn()}, OutActors);
+	UKismetSystemLibrary::SphereOverlapActors(GetWorld(), GetControlledActor()->GetActorLocation(), SphereRadius, ObjectTypesQuery, ActorClassFilter, TArray<AActor*>{GetControlledActor()}, OutActors);
 	TargetActors.Append(OutActors);
 }

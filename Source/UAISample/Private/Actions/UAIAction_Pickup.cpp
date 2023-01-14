@@ -11,7 +11,7 @@
 
 void UUAIAction_Pickup::OnBeginPlay_Implementation()
 {
-	Character = Cast<AUAICharacter>(GetPawn());
+	Character = Cast<AUAICharacter>(GetControlledActor());
 }
 
 //---------------------------------------------------------------------------------------
