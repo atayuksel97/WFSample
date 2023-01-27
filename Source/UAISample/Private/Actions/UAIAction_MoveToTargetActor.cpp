@@ -40,7 +40,7 @@ void UUAIAction_MoveToTargetActor::TickAction_Implementation(float DeltaTime)
 {
 	TRACE_CPUPROFILER_EVENT_SCOPE(UUAIAction_MoveToTargetActor::TickAction_Implementation)
 	
-	if (IsValid(TargetActor))
+	if (IsValid(TargetActor) && IsValid(GetAIController()))
 	{
 		const EPathFollowingRequestResult::Type Result = GetAIController()->MoveToActor(TargetActor.Get(), AcceptanceRadius, bStopOnOverlap, bUsePathfinding, bCanStrafe,
 		                                                                                NavigationQueryFilterClass, bAllowPartialPaths);
