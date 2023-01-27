@@ -12,7 +12,8 @@
 void UUAIConsideration_MyHealth::OnBeginPlay_Implementation()
 {
 	Super::OnBeginPlay_Implementation();
-	HealthComp = Cast<AUAICharacter>(GetControlledActor())->HealthComp;
+	const AUAICharacter* Character = Cast<AUAICharacter>(GetControlledActor());
+	HealthComp = Character ? Cast<AUAICharacter>(GetControlledActor())->HealthComp : nullptr;
 }
 
 //---------------------------------------------------------------------------------------
@@ -20,7 +21,7 @@ void UUAIConsideration_MyHealth::OnBeginPlay_Implementation()
 float UUAIConsideration_MyHealth::GetValue_Implementation(const AActor* InTargetActor)
 {
 	TRACE_CPUPROFILER_EVENT_SCOPE(UUAIConsideration_MyHealth::GetValue_Implementation)
-	
+
 	if (HealthComp.IsValid())
 	{
 		return HealthComp->GetHealth() / HealthComp->GetMaxHealth();
