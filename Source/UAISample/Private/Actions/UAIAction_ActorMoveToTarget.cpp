@@ -9,10 +9,6 @@
 
 UUAIAction_ActorMoveToTarget::UUAIAction_ActorMoveToTarget()
 {
-	bShouldTick = true;
-	bIsInterruptible = true;
-	bHasTargetActor = true;
-	bUseMomentumOnSelectedTargetActor = true;
 }
 
 //---------------------------------------------------------------------------------------

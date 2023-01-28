@@ -10,7 +10,7 @@
 float UUAIConsideration_TargetLineOfSight::GetValue_Implementation(const AActor* InTargetActor)
 {
 	TRACE_CPUPROFILER_EVENT_SCOPE(UUAIConsideration_TargetLineOfSight::GetValue_Implementation)
-	if (IsValid(InTargetActor) && GetAIController()->LineOfSightTo(InTargetActor))
+	if (IsValid(InTargetActor) && IsValid(GetAIController()) && GetAIController()->LineOfSightTo(InTargetActor))
 		return 1.0f;
 
 	return 0.0f;
