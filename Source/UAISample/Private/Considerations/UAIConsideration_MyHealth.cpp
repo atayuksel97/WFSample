@@ -29,3 +29,15 @@ float UUAIConsideration_MyHealth::GetValue_Implementation(const AActor* InTarget
 
 	return 0.0f;
 }
+
+//---------------------------------------------------------------------------------------
+
+#if ENABLE_VISUAL_LOG
+void UUAIConsideration_MyHealth::GrabDebugSnapshot(FVisualLogEntry* Snapshot) const
+{
+	Super::GrabDebugSnapshot(Snapshot);
+
+	if (IsValid(HealthComp.Get()))
+		GetVisualLogCategory()->Add(TEXT("Health"), FString::Printf(TEXT("%f"), HealthComp->GetHealth()));
+}
+#endif

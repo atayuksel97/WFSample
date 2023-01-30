@@ -18,6 +18,10 @@ public:
 	virtual void OnBeginPlay_Implementation() override;
 	virtual float GetValue_Implementation(const AActor* InTargetActor) override;
 
+#if ENABLE_VISUAL_LOG
+	virtual void GrabDebugSnapshot(FVisualLogEntry* Snapshot) const override;
+#endif
+	
 	// PROPERTIES
 private:
 	TWeakObjectPtr<UUAIHealthComponent> HealthComp;
