@@ -27,7 +27,7 @@ void UUAIAction_MoveToCover::TickAction_Implementation(float DeltaTime)
 {
 	// DECLARE_SCOPE_CYCLE_COUNTER(TEXT("UUAIAction_MoveToCover::TickAction_Implementation"), STAT_UUAIAction_MoveToCover_TickAction_Implementation, STATGROUP_UAISample);
 	TRACE_CPUPROFILER_EVENT_SCOPE(UUAIAction_MoveToCover::TickAction_Implementation)
-	
+
 	FEnvQueryRequest HidingSpotQueryRequest = FEnvQueryRequest(EnvQuery, GetControlledActor());
 	HidingSpotQueryRequest.Execute(EEnvQueryRunMode::AllMatching, this, &UUAIAction_MoveToCover::MoveToQueryResult);
 
@@ -52,13 +52,25 @@ void UUAIAction_MoveToCover::OnUpdateTargets_Implementation()
 }
 
 //---------------------------------------------------------------------------------------
+
+#if ENABLE_VISUAL_LOG
+void UUAIAction_MoveToCover::GrabDebugSnapshot(FVisualLogEntry* Snapshot) const
+{
+	Super::GrabDebugSnapshot(Snapshot);
+
+	GetVisualLogCategory()->Add(TEXT("bIsQuerySuccessful"), bIsQuerySuccessful ? TEXT("true") : TEXT("false"));
+}
+#endif
+
+
+//---------------------------------------------------------------------------------------
 // FUNCTIONS
 //---------------------------------------------------------------------------------------
 
 void UUAIAction_MoveToCover::MoveToQueryResult(TSharedPtr<FEnvQueryResult> Result)
 {
 	TRACE_CPUPROFILER_EVENT_SCOPE(UUAIAction_MoveToCover::MoveToQueryResult)
-	
+
 	if (Result->IsSuccessful())
 	{
 		bIsQuerySuccessful = true;

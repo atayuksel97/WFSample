@@ -22,6 +22,11 @@ public:
 	virtual void OnDeactivate_Implementation() override;
 	virtual void OnUpdateTargets_Implementation() override;
 
+#if ENABLE_VISUAL_LOG
+	virtual void GrabDebugSnapshot(FVisualLogEntry* Snapshot) const override;
+#endif
+	
+	// FUNCTIONS
 public:
 	void MoveToQueryResult(TSharedPtr<FEnvQueryResult> Result);
 	
