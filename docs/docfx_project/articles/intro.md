@@ -27,7 +27,7 @@ Buying food on the other hand has considerations for not being tired and not hav
 Resting action probably should only give a high score if you are tired but not that hungry.
 
 Each consideration is a function of a curve which its x axis is the value that we read from the agent/environment and its y axis is the output score of the consideration.
-So fur hunger we read the hunger value of the agent and return it and then its value is given to a curve as x axis and the resulting y axis is the actual score of the consideration.
+So for hunger we read the hunger value of the agent and return it and then its value is given to a curve as x axis and the resulting y axis is the actual score of the consideration.
 In this way we can make a consideration more sensitive to certan values so for example having a hunger of 0.5 can return 0.5 in the case of a linear curve and 0.9 or 0.1 in the case of custom curves.
 
 These curves for considerations are the main way that designers make the agent react the way they want.
@@ -42,22 +42,22 @@ This is the architecture diagram of the system
 
 ![Architecture](../images/architecture.png)
 
-Any game object which want to be controlled by utility AI should have a [brain](brain.md) component attached.
+Any actor which want to be controlled by utility AI should have a [UAIUtilityAIComponent](brain.md) component attached.
 This component executes the main utility AI logic by executing all action considerations once in a while and choose a high scoring action to do.
 Then it calls callbacks of the chosen action which can drive the agent in the world. 
-The action code has access to components of the game object because the brain component of the game object is passed to it in its `OnInitialized()` callback.
+The action and the considerations have access to the `UUtilityAIComponent` and the actor which owns it.
 
-[Actions](actions.md) which an agent can do are organized inside [action sets](actionsets.md) and have their own considerations listed under them with custom curves per action. 
-A group of action sets themselves are stored in an asset called [Agent Behavior](behaviors.md) which is what you attach to a brain to use.
+[Actions](actions.md) which an agent has, have their own considerations listed under them with custom curves per action. 
+A group of actions themselves are stored in an asset called [UAIBehavior](behaviors.md) which is what you attach to a `UUtilityAIComponent` to use.
 
-So the root of the tree is the brain component which has an Agent Behavior asset attached and then each agent behavior contains action sets as its children/branches and each action set contains a set of actions which contains their own considerations.
+So the root of the tree is the `UUtilityAIComponent` component which has a set of actions attached and each action contains a set of their own considerations.
 
-You define [actions](actions.md) and [considerations](considerations.md) by deriving classes from [ActionBase](xref:NoOpArmy.WiseFeline.ActionBase) and [ConsiderationBase](xref:NoOpArmy.WiseFeline.ConsiderationBase)).
+You define [actions](actions.md) and [considerations](considerations.md) by deriving classes from `UAIAction` and `Consideration`.
 
 To create each agent's AI you:
-- Create an [Agent Behavior](behaviors.md) by right clicking in the project view and choosing Create>NoOpArmy>Wise Feline>Agent Behavior.
+- Create an [UAIBehavior](behaviors.md) by right clicking in the project and choosing Create>NoOpArmy>Wise Feline>Behavior.
 - Name it whatever makes sense.
-- Select the agent behavior asset you just created.
+- Select the UAIBehavior asset you just created.
 - Open the [Wise Feline window](editorWindow.md) by going to Window>NoOpArmy>Wise Feline window.
 - Now add actions and considerations and action sets to the behavior.
 
