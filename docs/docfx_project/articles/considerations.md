@@ -6,10 +6,10 @@ Considerations are defined in code or Blueprint by deriving from `UAICoonsiderat
 After defining a consideration, you can add it to actions of a Behavior asset.
 To add considerations to actions
 
-- Implement a consideration in a class. For example create a HungerConsideration.cs file and implement `HungerConsideration` inside it like this. The example code is posted below.
-- Select the desired agent behavior asset and open the Wise Feline window at *Window>NoOpArmy>Wise Feline*.
-- Select the action which you want to add the consideration to by clicking on it. You might need to select the appropriate action set first.
-- Now in the considerations list for the action click Add Consideration and from the context menu choose `HungerConsideration`
+- Implement a consideration in a class.
+- Select the desired behavior asset and double click on it to open its editor.
+- Select the action which you want to add the consideration to by clicking on it.
+- Now in the considerations list for the action click Add Consideration and from the context menu choose the implemented consideration.
 - Set the curve and the parameters of the consideration as you desire.
 
 The consideration can be defined like this in C++:
@@ -50,11 +50,13 @@ float UUAIConsideration_MyAmmo::GetValue_Implementation(const AActor* InTargetAc
 
 Or like this in Blueprint
 
-`OnBeginPlay()` is called when the consideration is initialized after the `UUtilityAIComponent` component is created or the agent behavior asset is added to an already existing component at runtime.
+`OnBeginPlay()` is called when the consideration is initialized after the `UUtilityAIComponent` component is created or the behavior asset is added to an already existing component at runtime.
 
 `GetValue()` is called whenever the action wants to calculate its score.
 
 What you return in GetValue should be a number between 0 and 1 (both inclusive) which will be fed to the curve of the consideration as the value for the x axis and the y axis value at that point on the curve is the score of the consideration used in score calculations.
+
+You can check the box for having targets in the behavior editor UI for the consideration so the action's current target is passed to the consideration if needed.
 
 As you can see this consideration assumes that the consideration is used in an actor which is owned by a controller (usually an AIController).
 

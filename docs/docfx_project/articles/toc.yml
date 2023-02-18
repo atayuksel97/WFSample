@@ -4,19 +4,15 @@
   href: considerations.md
 - name: Actions
   href: actions.md
-- name: Action sets
-  href: actionSets.md
-- name: Brain component
-  href: brain.md
-- name: Agent Behavior assets
+- name: Utility AI component
+  href: utilityaicomponent.md
+- name: UAI Behavior assets
   href: behaviors.md
-- name: Wise Feline editor window
-  href: editorWindow.md
 - name: Networking and Multiplayer
   href: networking.md
 - name: How to debug
   href: debug.md
 - name: The Sample 
-  href: demo.md
+  href: samples.md
 - name: Design resources
   href: design.md
