@@ -4,7 +4,7 @@ Actions are the most important part of a utility AI system alongside considerati
 An action is a concrete and most of the time atomic unit of work which an agent can do. Shoot, Find health pack, Find cover, Take cover in the found cover, eat food and Choose the best camera to shot the scene with are all examples of actions.
 However an action doesn't have to be low level and can be pretty high level, you can have a hierarchy of them in your game and for example have a set of actions for groups of NPCs which can be attack the target, spread members in the room, defend sensitive points, find weak spots by bombing every place and then some NPC actions which take command from the group so when the group chooses to attack the target, a member NPC might execute its shoot action or move toward target action or cover the attackers.
 
-To create an action you should inherit a class in C++ or blueprint from `UAIAction`:
+To create an action you should inherit a class in C++ or blueprint from `UWFAction`:
 
 Here is an action which moves an actor toward a target.
 

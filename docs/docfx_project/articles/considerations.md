@@ -1,7 +1,7 @@
 # Considerations
 
 Each action's score is calculated by calculating scores of all of its considerations and then multiplying them with each other.
-Considerations are defined in code or Blueprint by deriving from `UAICoonsideration` class.
+Considerations are defined in code or Blueprint by deriving from `UWFCoonsideration` class.
 
 After defining a consideration, you can add it to actions of a Behavior asset.
 To add considerations to actions

@@ -42,25 +42,24 @@ This is the architecture diagram of the system
 
 ![Architecture](../images/architecture.png)
 
-Any actor which want to be controlled by utility AI should have a [UAIUtilityAIComponent](brain.md) component attached.
+Any actor which want to be controlled by utility AI should have a [WFUtilityAIComponent](utilityaicomponent.md) component attached to itself or the AI Controller possessing it.
 This component executes the main utility AI logic by executing all action considerations once in a while and choose a high scoring action to do.
 Then it calls callbacks of the chosen action which can drive the agent in the world. 
-The action and the considerations have access to the `UUtilityAIComponent` and the actor which owns it.
+The action and the considerations have access to the `WFUtilityAIComponent` and the actor which owns it.
 
 [Actions](actions.md) which an agent has, have their own considerations listed under them with custom curves per action. 
-A group of actions themselves are stored in an asset called [UAIBehavior](behaviors.md) which is what you attach to a `UUtilityAIComponent` to use.
+A group of actions themselves are stored in an asset called [WFBehavior](behaviors.md) which is what you attach to a `UUtilityAIComponent` to use.
 
-So the root of the tree is the `UUtilityAIComponent` component which has a set of actions attached and each action contains a set of their own considerations.
+So the root of the tree is the `WFUtilityAIComponent` component which has a set of actions attached and each action contains a set of their own considerations.
 
-You define [actions](actions.md) and [considerations](considerations.md) by deriving classes from `UAIAction` and `Consideration`.
+You define [actions](actions.md) and [considerations](considerations.md) by deriving classes from `WFAction` and `WFConsideration`.
 
 To create each agent's AI you:
-- Create an [UAIBehavior](behaviors.md) by right clicking in the project and choosing Create>NoOpArmy>Wise Feline>Behavior.
+- Create an [WFBehavior](behaviors.md) by right clicking in the content browser and choosing Wise Feline > Behavior.
 - Name it whatever makes sense.
-- Select the UAIBehavior asset you just created.
-- Open the [Wise Feline window](editorWindow.md) by going to Window>NoOpArmy>Wise Feline window.
+- Double click on the WFBehavior asset you just created. The editor window opens.
 - Now add actions and considerations and action sets to the behavior.
 
 
 Different pages of this manual describe each of these items in detail. Read them and come back to this for the bigger picture again to understand it well. 
-There is also a [demo](demo.md) which helps you by showing how to implement a semi-realistic sample.
+There is also a [sample](sample.md) which helps you by showing how to implement a semi-realistic sample.
