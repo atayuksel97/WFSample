@@ -62,4 +62,4 @@ To create each agent's AI you:
 
 
 Different pages of this manual describe each of these items in detail. Read them and come back to this for the bigger picture again to understand it well. 
-There is also a [sample](sample.md) which helps you by showing how to implement a semi-realistic sample.
+There is also a [sample](samples.md) which helps you by showing how to implement a semi-realistic sample.

@@ -1,26 +1,6 @@
 {
-  "metadata": [
-    {
-      "src": [
-        {
-          "files": [
-            "src/**"
-          ]
-        }
-      ],
-      "dest": "api",
-      "disableGitFeatures": false,
-      "disableDefaultFilter": false
-    }
-  ],
   "build": {
     "content": [
-      {
-        "files": [
-          "api/**.yml",
-          "api/index.md"
-        ]
-      },
       {
         "files": [
           "articles/**.md",
@@ -40,7 +20,7 @@
     "overwrite": [
       {
         "files": [
-          "apidoc/**.md"
+          
         ],
         "exclude": [
           "obj/**",
@@ -58,21 +38,11 @@
     "markdownEngineName": "markdig",
     "noLangKeyword": false,
     "keepFileLink": false,
-    "cleanupCacheHistory": false,
+    "cleanupCacheHistory": true,
     "disableGitFeatures": false
   },
   "pdf": {
     "content": [
-      {
-        "files": [
-          "api/**.yml",
-          "api-vb/**.yml"
-        ],
-        "exclude": [
-          "**/toc.yml",
-          "**/toc.md"
-        ]
-      },
       {
         "files": [
           "articles/**.md",
@@ -107,9 +77,6 @@
     ],
     "overwrite": [
       {
-        "files": [
-          "apidoc/**.md"
-        ],
         "exclude": [
           "**/bin/**",
           "**/obj/**",
