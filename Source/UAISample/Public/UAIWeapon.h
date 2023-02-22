@@ -45,96 +45,96 @@ private:
 
 	// PROPERTIES
 public:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "UAIWeapon")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - UAIWeapon")
 	int32 ClipSize;
 
 	/** Number of bullets in the current Clip */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "UAIWeapon")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - UAIWeapon")
 	int32 ClipBulletNum;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "UAIWeapon")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - UAIWeapon")
 	int32 TotalBullets;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "UAIWeapon")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - UAIWeapon")
 	int32 MaxBullets;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "UAIWeapon")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - UAIWeapon")
 	float BulletSpread;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "UAIWeapon")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - UAIWeapon")
 	float Damage;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "UAIWeapon")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - UAIWeapon")
 	TSubclassOf<UDamageType> DamageType;
 
 	/** Number of bullets can shot per minutes, ex: AK47= 600 */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "UAIWeapon")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - UAIWeapon")
 	float RateOfFire;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "UAIWeapon")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - UAIWeapon")
 	float ReloadTime;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "UAIWeapon")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - UAIWeapon")
 	float BulletMaxDistance;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category= "UAIWeapon")
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - UAIWeapon")
 	EWeaponState State;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "UAIWeapon")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - UAIWeapon")
 	FName MuzzleSocketName;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "UAIWeapon")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - UAIWeapon")
 	FName GripPointSocketName;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "UAIWeapon")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - UAIWeapon")
 	bool bShouldDrawAim;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "UAIWeapon")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - UAIWeapon")
 	bool bShouldDrawShoot;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "UAIWeapon")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - UAIWeapon")
 	bool bShouldDrawImpact;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "UAIWeapon")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - UAIWeapon")
 	float DrawAimShootThickness;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "UAIWeapon")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - UAIWeapon")
 	float DrawImpactSize;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "UAIWeapon")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - UAIWeapon")
 	float DrawAimLifeTime;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "UAIWeapon")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - UAIWeapon")
 	float DrawShootLifeTime;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "UAIWeapon")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - UAIWeapon")
 	float DrawImpactLifeTime;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "UAIWeapon")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - UAIWeapon")
 	FLinearColor DrawAimColor;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "UAIWeapon")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - UAIWeapon")
 	FLinearColor DrawShootColor;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "UAIWeapon")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - UAIWeapon")
 	FLinearColor DrawShootColorOnHit;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "UAIWeapon")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - UAIWeapon")
 	FLinearColor DrawImpactColor;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "UAIWeapon")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - UAIWeapon")
 	FLinearColor DrawImpactColorOnHit;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category= "UAIWeapon")
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - UAIWeapon")
 	FVector AimStartLocation;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category= "UAIWeapon")
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - UAIWeapon")
 	FVector AimEndLocation;
 
 	//~START COMPONENTS
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "UAIWeapon")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - UAIWeapon")
 	TObjectPtr<USkeletalMeshComponent> SkeletalMeshComp;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "UAIWeapon")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - UAIWeapon")
 	TObjectPtr<ULineBatchComponent> LineBatchComp;
 	//~END COMPONENTS
 

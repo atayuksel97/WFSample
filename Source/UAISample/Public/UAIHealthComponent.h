@@ -34,13 +34,13 @@ public:
 
 	// PROPERTIES
 public:
-	UPROPERTY(BlueprintAssignable, Category= "UAIHealthComponent")
+	UPROPERTY(BlueprintAssignable, Category= "WiseFelineSample - UAIHealthComponent")
 	FOnDied OnDiedEvent;
 	
 private:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "UAIHealthComponent", meta=(AllowPrivateAccess= "true"))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - UAIHealthComponent", meta=(AllowPrivateAccess= "true"))
 	float Health;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "UAIHealthComponent", meta=(AllowPrivateAccess= "true"))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - UAIHealthComponent", meta=(AllowPrivateAccess= "true"))
 	float MaxHealth;
 };

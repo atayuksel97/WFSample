@@ -33,23 +33,23 @@ protected:
 
 	// FUNCTIONS
 public:
-	UFUNCTION(BlueprintNativeEvent, Category= "UAICharacter")
+	UFUNCTION(BlueprintNativeEvent, Category= "WiseFelineSample - UAICharacter")
 	void OnDied();
 	void OnDied_Implementation();
 
 	// PROPERTIES
 public:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "UAICharacter")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - UAICharacter")
 	TSubclassOf<AUAIWeapon> WeaponClass;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category= "UAICharacter")
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - UAICharacter")
 	TObjectPtr<AUAIWeapon> Weapon;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category="UAICharacter")
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category="WiseFelineSample - UAICharacter")
 	TObjectPtr<AUAIPickup> OverlappedPickup;
 
 	//~START COMPONENTS
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "UAICharacter")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - UAICharacter")
 	TObjectPtr<UUAIHealthComponent> HealthComp;
 	//~END COMPONENTS
 };

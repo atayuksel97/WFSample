@@ -25,13 +25,13 @@ public:
 	// PROPERTIES
 public:
 	/** Sphere overlap radius for finding targets */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "Action_Shoot")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - Action_Shoot")
 	float SphereRadius;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "Action_Shoot")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - Action_Shoot")
 	TSubclassOf<AActor> ActorClassFilter;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "Action_Shoot")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - Action_Shoot")
 	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypesQuery;
 
 	TWeakObjectPtr<AUAIAICharacter> Character;

@@ -19,7 +19,7 @@ public:
 	AUAIPickup();
 	virtual void Tick(float DeltaTime) override;
 
-	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category= "Pickup")
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category= "WiseFelineSample - Pickup")
 	void OnUsed(AUAICharacter* Character);
 	virtual void OnUsed_Implementation(AUAICharacter* Character);
 
@@ -34,8 +34,8 @@ private:
 
 	// PROPERTIES
 public:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "Pickup")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - Pickup")
 	TObjectPtr<USphereComponent> SphereComp;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "Pickup")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - Pickup")
 	TObjectPtr<UStaticMeshComponent> StaticMeshComp;
 };

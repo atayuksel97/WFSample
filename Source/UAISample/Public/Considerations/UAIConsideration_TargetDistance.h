@@ -18,6 +18,6 @@ public:
 
 	// PROPERTIES
 public:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "Consideration_TargetDistance")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - Consideration_TargetDistance")
 	float MaxDistance;
 };

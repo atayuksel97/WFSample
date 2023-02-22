@@ -38,9 +38,9 @@ private:
 	// PROPERTIES
 public:
 	//~START COMPONENTS
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "UAICharacter")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - UAICharacter")
 	TObjectPtr<USkeletalMeshComponent> SkeletalMeshComp;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "UAICharacter")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - UAICharacter")
 	TObjectPtr<UCameraComponent> CameraComp;
 	//~END COMPONENTS
 };

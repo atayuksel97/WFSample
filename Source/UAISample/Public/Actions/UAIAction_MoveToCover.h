@@ -32,10 +32,10 @@ public:
 	
 	// PROPERTIES
 public:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "Action_MoveToCover")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - Action_MoveToCover")
 	TObjectPtr<UEnvQuery> EnvQuery;
 
-	UPROPERTY(VisibleAnywhere, Category= "Action_MoveToCover")
+	UPROPERTY(VisibleAnywhere, Category= "WiseFelineSample - Action_MoveToCover")
 	FVector TargetLocation;
 	
 	bool bIsQuerySuccessful;

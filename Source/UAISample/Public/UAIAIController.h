@@ -28,9 +28,9 @@ public:
 	TWeakObjectPtr<AUAIPlayerCharacter> PlayerCharacter;
 
 	//~START COMPONENTS
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "UAIAIController")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - UAIAIController")
 	TObjectPtr<UUAIUtilityAIComponent> UtilityAIComp;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "UAIAIController")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - UAIAIController")
 	TObjectPtr<UAIPerceptionComponent> PerceptionComp;
 	//~END COMPONENTS
 };
