@@ -6,7 +6,7 @@
 #include "UAIConsideration.h"
 #include "UAIConsideration_TargetDistance.generated.h"
 
-UCLASS(DisplayName= "Consideration_TargetDistance")
+UCLASS(ClassGroup= "WiseFelineSample", DisplayName= "Consideration_TargetDistance")
 class UAISAMPLE_API UUAIConsideration_TargetDistance : public UUAIConsideration
 {
 	GENERATED_BODY()

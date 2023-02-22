@@ -6,7 +6,7 @@
 #include "UAIConsideration.h"
 #include "UAIConsideration_TargetLineOfSight.generated.h"
 
-UCLASS(ClassGroup= "PluginDevelopment", ClassGroup= "Consideration_TargetLineOfSight")
+UCLASS(ClassGroup= "WiseFelineSample", ClassGroup= "Consideration_TargetLineOfSight")
 class UAISAMPLE_API UUAIConsideration_TargetLineOfSight : public UUAIConsideration
 {
 	GENERATED_BODY()

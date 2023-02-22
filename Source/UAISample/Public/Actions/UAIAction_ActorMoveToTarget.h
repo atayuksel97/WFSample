@@ -6,7 +6,7 @@
 #include "UAIAction.h"
 #include "UAIAction_ActorMoveToTarget.generated.h"
 
-UCLASS(DisplayName= "Action_ActorMoveToTarget")
+UCLASS(ClassGroup= "WiseFelineSample", DisplayName= "Action_ActorMoveToTarget")
 class UAISAMPLE_API UUAIAction_ActorMoveToTarget : public UUAIAction
 {
 	GENERATED_BODY()

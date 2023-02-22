@@ -9,7 +9,7 @@
 class AUAICharacter;
 class USphereComponent;
 
-UCLASS(Abstract, Blueprintable, BlueprintType, ClassGroup= "PluginDevelopment", DisplayName= "Pickup")
+UCLASS(Abstract, Blueprintable, BlueprintType, ClassGroup= "WiseFelineSample", DisplayName= "Pickup")
 class UAISAMPLE_API AUAIPickup : public AActor
 {
 	GENERATED_BODY()

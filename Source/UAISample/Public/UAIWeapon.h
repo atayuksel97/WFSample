@@ -16,7 +16,7 @@ enum class EWeaponState
 	RELOADING
 };
 
-UCLASS(Blueprintable, ClassGroup= "UAISample")
+UCLASS(Blueprintable, ClassGroup= "WiseFelineSample")
 class UAISAMPLE_API AUAIWeapon : public AActor
 {
 	GENERATED_BODY()

@@ -8,7 +8,7 @@
 
 class AUAICharacter;
 
-UCLASS(DisplayName= "Consideration_MyAmmo")
+UCLASS(ClassGroup= "WiseFelineSample", DisplayName= "Consideration_MyAmmo")
 class UAISAMPLE_API UUAIConsideration_MyAmmo : public UUAIConsideration
 {
 	GENERATED_BODY()

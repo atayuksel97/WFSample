@@ -9,7 +9,7 @@
 class UAITask_MoveTo;
 class UNavigationQueryFilter;
 
-UCLASS(DisplayName= "Action_MoveToTargetActor")
+UCLASS(ClassGroup= "WiseFelineSample", DisplayName= "Action_MoveToTargetActor")
 class UAISAMPLE_API UUAIAction_MoveToTargetActor : public UUAIAction
 {
 	GENERATED_BODY()

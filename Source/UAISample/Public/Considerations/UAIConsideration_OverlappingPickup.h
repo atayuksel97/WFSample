@@ -8,7 +8,7 @@
 
 class AUAICharacter;
 
-UCLASS(ClassGroup= "PluginDevelopment", DisplayName= "Consideration_OverlappingPickup")
+UCLASS(ClassGroup= "WiseFelineSample", DisplayName= "Consideration_OverlappingPickup")
 class UAISAMPLE_API UUAIConsideration_OverlappingPickup : public UUAIConsideration
 {
 	GENERATED_BODY()

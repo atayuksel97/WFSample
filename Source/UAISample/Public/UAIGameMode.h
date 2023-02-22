@@ -6,7 +6,7 @@
 #include "GameFramework/GameModeBase.h"
 #include "UAIGameMode.generated.h"
 
-UCLASS()
+UCLASS(ClassGroup= "WiseFelineSample")
 class UAISAMPLE_API AUAIGameMode : public AGameModeBase
 {
 	GENERATED_BODY()

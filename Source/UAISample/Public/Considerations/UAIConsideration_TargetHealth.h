@@ -8,7 +8,7 @@
 
 class UUAIHealthComponent;
 
-UCLASS(DisplayName= "Consideration_TargetHealth")
+UCLASS(ClassGroup= "WiseFelineSample", DisplayName= "Consideration_TargetHealth")
 class UAISAMPLE_API UUAIConsideration_TargetHealth : public UUAIConsideration
 {
 	GENERATED_BODY()

@@ -11,7 +11,7 @@ class UCameraComponent;
 class UUAIHealthComponent;
 class AUAIWeapon;
 
-UCLASS(Blueprintable, ClassGroup= "PluginDevelopment", DisplayName= "PlayerCharacter")
+UCLASS(Blueprintable, ClassGroup= "WiseFelineSample", DisplayName= "PlayerCharacter")
 class UAISAMPLE_API AUAIPlayerCharacter : public AUAICharacter
 {
 	GENERATED_BODY()

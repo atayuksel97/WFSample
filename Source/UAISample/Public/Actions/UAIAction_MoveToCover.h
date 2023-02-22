@@ -9,7 +9,7 @@
 class UEnvQuery;
 struct FEnvQueryResult;
 
-UCLASS(DisplayName= "MoveToCover")
+UCLASS(ClassGroup= "WiseFelineSample", DisplayName= "MoveToCover")
 class UAISAMPLE_API UUAIAction_MoveToCover : public UUAIAction
 {
 	GENERATED_BODY()

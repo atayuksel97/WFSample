@@ -8,7 +8,7 @@
 
 class AUAIWeapon;
 
-UCLASS()
+UCLASS(ClassGroup= "WiseFelineSample")
 class UAISAMPLE_API UUAIAction_Reload : public UUAIAction
 {
 	GENERATED_BODY()

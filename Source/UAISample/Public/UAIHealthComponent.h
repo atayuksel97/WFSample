@@ -8,7 +8,7 @@
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnDied);
 
-UCLASS(ClassGroup=(PluginDevelopment), meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup= "WiseFelineSample", meta=(BlueprintSpawnableComponent))
 class UAISAMPLE_API UUAIHealthComponent : public UActorComponent
 {
 	GENERATED_BODY()

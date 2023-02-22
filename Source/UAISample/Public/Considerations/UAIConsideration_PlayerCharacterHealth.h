@@ -8,7 +8,7 @@
 
 class AUAIPlayerCharacter;
 
-UCLASS(ClassGroup= "PluginDevelopment", DisplayName= "Consideration_PlayerCharacterHealth")
+UCLASS(ClassGroup= "WiseFelineSample", DisplayName= "Consideration_PlayerCharacterHealth")
 class UAISAMPLE_API UUAIConsideration_PlayerCharacterHealth : public UUAIConsideration
 {
 	GENERATED_BODY()

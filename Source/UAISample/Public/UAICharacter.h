@@ -12,7 +12,7 @@ class UUAIHealthComponent;
 class AUAIWeapon;
 class AUAIPickup;
 
-UCLASS(Blueprintable, ClassGroup= "PluginDevelopment", DisplayName= "UAICharacter")
+UCLASS(Blueprintable, ClassGroup= "WiseFelineSample", DisplayName= "UAICharacter")
 class UAISAMPLE_API AUAICharacter : public ACharacter
 {
 	GENERATED_BODY()

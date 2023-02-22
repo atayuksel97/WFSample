@@ -8,7 +8,7 @@
 
 class AUAIAICharacter;
 
-UCLASS(DisplayName= "Action_Shoot")
+UCLASS(ClassGroup= "WiseFelineSample", DisplayName= "Action_Shoot")
 class UAISAMPLE_API UUAIAction_Shoot : public UUAIAction
 {
 	GENERATED_BODY()

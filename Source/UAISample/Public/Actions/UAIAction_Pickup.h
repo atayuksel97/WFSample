@@ -8,7 +8,7 @@
 
 class AUAICharacter;
 
-UCLASS(ClassGroup= "PluginDevelopment", DisplayName= "Action_Pickup")
+UCLASS(ClassGroup= "WiseFelineSample", DisplayName= "Action_Pickup")
 class UAISAMPLE_API UUAIAction_Pickup : public UUAIAction
 {
 	GENERATED_BODY()

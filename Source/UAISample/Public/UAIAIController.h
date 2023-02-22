@@ -9,7 +9,7 @@
 class UUAIUtilityAIComponent;
 class AUAIPlayerCharacter;
 
-UCLASS(Blueprintable, ClassGroup= "PluginDevelopment")
+UCLASS(Blueprintable, ClassGroup= "WiseFelineSample")
 class UAISAMPLE_API AUAIAIController : public AAIController
 {
 	GENERATED_BODY()
