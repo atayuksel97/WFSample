@@ -9,6 +9,6 @@ public class UAISample : ModuleRules
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
 		PublicDependencyModuleNames.AddRange(new string[]
-			{ "Core", "CoreUObject", "Engine", "InputCore", "UtilityAI", "NavigationSystem" });
+			{ "Core", "CoreUObject", "Engine", "InputCore", "WiseFeline", "NavigationSystem" });
 	}
 }

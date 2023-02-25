@@ -3,13 +3,13 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "UAIConsideration.h"
+#include "WFConsideration.h"
 #include "UAIConsideration_OverlappingPickup.generated.h"
 
 class AUAICharacter;
 
 UCLASS(ClassGroup= "WiseFelineSample", DisplayName= "Consideration_OverlappingPickup")
-class UAISAMPLE_API UUAIConsideration_OverlappingPickup : public UUAIConsideration
+class UAISAMPLE_API UUAIConsideration_OverlappingPickup : public UWFConsideration
 {
 	GENERATED_BODY()
 	// CTOR/DTOR & VIRTUAL FUNCTIONS

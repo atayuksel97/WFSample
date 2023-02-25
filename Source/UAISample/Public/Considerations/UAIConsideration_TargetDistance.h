@@ -3,11 +3,11 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "UAIConsideration.h"
+#include "WFConsideration.h"
 #include "UAIConsideration_TargetDistance.generated.h"
 
 UCLASS(ClassGroup= "WiseFelineSample", DisplayName= "Consideration_TargetDistance")
-class UAISAMPLE_API UUAIConsideration_TargetDistance : public UUAIConsideration
+class UAISAMPLE_API UUAIConsideration_TargetDistance : public UWFConsideration
 {
 	GENERATED_BODY()
 

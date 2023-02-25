@@ -3,13 +3,13 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "UAIAction.h"
+#include "WFAction.h"
 #include "UAIAction_Pickup.generated.h"
 
 class AUAICharacter;
 
 UCLASS(ClassGroup= "WiseFelineSample", DisplayName= "Action_Pickup")
-class UAISAMPLE_API UUAIAction_Pickup : public UUAIAction
+class UAISAMPLE_API UUAIAction_Pickup : public UWFAction
 {
 	GENERATED_BODY()
 

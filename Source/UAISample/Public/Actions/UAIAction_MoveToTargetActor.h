@@ -3,14 +3,14 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "UAIAction.h"
+#include "WFAction.h"
 #include "UAIAction_MoveToTargetActor.generated.h"
 
 class UAITask_MoveTo;
 class UNavigationQueryFilter;
 
 UCLASS(ClassGroup= "WiseFelineSample", DisplayName= "Action_MoveToTargetActor")
-class UAISAMPLE_API UUAIAction_MoveToTargetActor : public UUAIAction
+class UAISAMPLE_API UUAIAction_MoveToTargetActor : public UWFAction
 {
 	GENERATED_BODY()
 

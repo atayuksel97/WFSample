@@ -3,13 +3,13 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "UAIConsideration.h"
+#include "WFConsideration.h"
 #include "UAIConsideration_PlayerCharacterHealth.generated.h"
 
 class AUAIPlayerCharacter;
 
 UCLASS(ClassGroup= "WiseFelineSample", DisplayName= "Consideration_PlayerCharacterHealth")
-class UAISAMPLE_API UUAIConsideration_PlayerCharacterHealth : public UUAIConsideration
+class UAISAMPLE_API UUAIConsideration_PlayerCharacterHealth : public UWFConsideration
 {
 	GENERATED_BODY()
 	// CTOR/DTOR & VIRTUAL FUNCTIONS

@@ -3,14 +3,14 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "UAIAction.h"
+#include "WFAction.h"
 #include "UAIAction_MoveToCover.generated.h"
 
 class UEnvQuery;
 struct FEnvQueryResult;
 
 UCLASS(ClassGroup= "WiseFelineSample", DisplayName= "MoveToCover")
-class UAISAMPLE_API UUAIAction_MoveToCover : public UUAIAction
+class UAISAMPLE_API UUAIAction_MoveToCover : public UWFAction
 {
 	GENERATED_BODY()
 

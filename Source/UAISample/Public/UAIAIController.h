@@ -6,7 +6,7 @@
 #include "AIController.h"
 #include "UAIAIController.generated.h"
 
-class UUAIUtilityAIComponent;
+class UWFBrainComponent;
 class AUAIPlayerCharacter;
 
 UCLASS(Blueprintable, ClassGroup= "WiseFelineSample")
@@ -29,7 +29,7 @@ public:
 
 	//~START COMPONENTS
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - UAIAIController")
-	TObjectPtr<UUAIUtilityAIComponent> UtilityAIComp;
+	TObjectPtr<UWFBrainComponent> UtilityAIComp;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - UAIAIController")
 	TObjectPtr<UAIPerceptionComponent> PerceptionComp;
 	//~END COMPONENTS

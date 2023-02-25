@@ -3,13 +3,13 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "UAIConsideration.h"
+#include "WFConsideration.h"
 #include "UAIConsideration_MyClipAmmo.generated.h"
 
 class AUAICharacter;
 
 UCLASS(ClassGroup= "WiseFelineSample", DisplayName= "UAIConsideration_MyClipAmmo")
-class UAISAMPLE_API UUAIConsideration_MyClipAmmo : public UUAIConsideration
+class UAISAMPLE_API UUAIConsideration_MyClipAmmo : public UWFConsideration
 {
 	GENERATED_BODY()
 

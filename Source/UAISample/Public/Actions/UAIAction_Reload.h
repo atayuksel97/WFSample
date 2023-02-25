@@ -3,13 +3,13 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "UAIAction.h"
+#include "WFAction.h"
 #include "UAIAction_Reload.generated.h"
 
 class AUAIWeapon;
 
 UCLASS(ClassGroup= "WiseFelineSample")
-class UAISAMPLE_API UUAIAction_Reload : public UUAIAction
+class UAISAMPLE_API UUAIAction_Reload : public UWFAction
 {
 	GENERATED_BODY()
 

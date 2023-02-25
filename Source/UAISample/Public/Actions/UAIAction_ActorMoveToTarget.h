@@ -3,11 +3,11 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "UAIAction.h"
+#include "WFAction.h"
 #include "UAIAction_ActorMoveToTarget.generated.h"
 
 UCLASS(ClassGroup= "WiseFelineSample", DisplayName= "Action_ActorMoveToTarget")
-class UAISAMPLE_API UUAIAction_ActorMoveToTarget : public UUAIAction
+class UAISAMPLE_API UUAIAction_ActorMoveToTarget : public UWFAction
 {
 	GENERATED_BODY()
 

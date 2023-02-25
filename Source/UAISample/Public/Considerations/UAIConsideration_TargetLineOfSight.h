@@ -3,11 +3,11 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "UAIConsideration.h"
+#include "WFConsideration.h"
 #include "UAIConsideration_TargetLineOfSight.generated.h"
 
 UCLASS(ClassGroup= "WiseFelineSample", ClassGroup= "Consideration_TargetLineOfSight")
-class UAISAMPLE_API UUAIConsideration_TargetLineOfSight : public UUAIConsideration
+class UAISAMPLE_API UUAIConsideration_TargetLineOfSight : public UWFConsideration
 {
 	GENERATED_BODY()
 

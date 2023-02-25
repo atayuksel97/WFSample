@@ -3,13 +3,13 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "UAIConsideration.h"
+#include "WFConsideration.h"
 #include "UAIConsideration_MyHealth.generated.h"
 
 class UUAIHealthComponent;
 
 UCLASS(ClassGroup= "WiseFelineSample", DisplayName= "Consideration_MyHealth")
-class UAISAMPLE_API UUAIConsideration_MyHealth : public UUAIConsideration
+class UAISAMPLE_API UUAIConsideration_MyHealth : public UWFConsideration
 {
 	GENERATED_BODY()
 	

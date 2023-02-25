@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "UAIAIController.h"
-#include "UAIUtilityAIComponent.h"
+#include "WFBrainComponent.h"
 #include "Perception/AIPerceptionComponent.h"
 
 //---------------------------------------------------------------------------------------
@@ -10,7 +10,7 @@
 
 AUAIAIController::AUAIAIController()
 {
-	UtilityAIComp = CreateDefaultSubobject<UUAIUtilityAIComponent>(TEXT("UtilityAIComponent"));
+	UtilityAIComp = CreateDefaultSubobject<UWFBrainComponent>(TEXT("UtilityAIComponent"));
 	UtilityAIComp->EvaluationIntervalTime = 0.2f;
 
 	PerceptionComponent = CreateDefaultSubobject<UAIPerceptionComponent>(TEXT("PerceptionComponent"));
