@@ -23,7 +23,7 @@ float UWFConsideration_TargetDistance::GetValue_Implementation(const AActor* InT
 
 //---------------------------------------------------------------------------------------
 
-bool UWFConsideration_TargetDistance::IsNeededTarget_Implementation() const
+bool UWFConsideration_TargetDistance::IsTargetNeeded_Implementation() const
 {
 	return true;
 }

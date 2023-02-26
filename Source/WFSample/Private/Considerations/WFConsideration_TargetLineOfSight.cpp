@@ -18,7 +18,7 @@ float UWFConsideration_TargetLineOfSight::GetValue_Implementation(const AActor* 
 
 //---------------------------------------------------------------------------------------
 
-bool UWFConsideration_TargetLineOfSight::IsNeededTarget_Implementation() const
+bool UWFConsideration_TargetLineOfSight::IsTargetNeeded_Implementation() const
 {
 	return true;
 }

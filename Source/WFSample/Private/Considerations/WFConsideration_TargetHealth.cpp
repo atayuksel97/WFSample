@@ -24,7 +24,7 @@ float UWFConsideration_TargetHealth::GetValue_Implementation(const AActor* InTar
 
 //---------------------------------------------------------------------------------------
 
-bool UWFConsideration_TargetHealth::IsNeededTarget_Implementation() const
+bool UWFConsideration_TargetHealth::IsTargetNeeded_Implementation() const
 {
 	return true;
 }
