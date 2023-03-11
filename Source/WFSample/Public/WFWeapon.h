@@ -45,83 +45,105 @@ private:
 
 	// PROPERTIES
 public:
+	/** The size of the weapon's clip. */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - Weapon")
 	int32 ClipSize;
 
-	/** Number of bullets in the current Clip */
+	/** The number of bullets currently in the weapon's clip. */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - Weapon")
 	int32 ClipBulletNum;
 
+	/** The total number of bullets the weapon has (both in the clip and in reserve). */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - Weapon")
 	int32 TotalBullets;
 
+	/** The maximum number of bullets the weapon can hold (both in the clip and in reserve). */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - Weapon")
 	int32 MaxBullets;
 
+	/** The spread of each bullet when fired from the weapon. */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - Weapon")
 	float BulletSpread;
 
+	/** The amount of damage each bullet does when it hits something. */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - Weapon")
 	float Damage;
 
+	/** The type of damage inflicted by the weapon's bullets. */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - Weapon")
 	TSubclassOf<UDamageType> DamageType;
 
-	/** Number of bullets can shot per minutes, ex: AK47= 600 */
+	/** The number of bullets that can be fired per minute, ex: AK47= 600 */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - Weapon")
 	float RateOfFire;
 
+	/** The amount of time it takes to reload the weapon's clip. */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - Weapon")
 	float ReloadTime;
 
+	/** The maximum distance that a bullet can travel before it is destroyed. */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - Weapon")
 	float BulletMaxDistance;
 
+	/** The current state of the weapon. */
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - Weapon")
 	EWeaponState State;
-
+	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - Weapon")
 	FName MuzzleSocketName;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - Weapon")
 	FName GripPointSocketName;
 
+	/** Whether or not the weapon should draw a trace when aiming. */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - Weapon")
 	bool bShouldDrawAim;
 
+	/** Whether or not the weapon should draw a trace when shooting. */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - Weapon")
 	bool bShouldDrawShoot;
 
+	/** Whether or not the weapon should draw a point where the bullet hits. */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - Weapon")
 	bool bShouldDrawImpact;
 
+	/** The thickness of the AimShoot trace line. */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - Weapon")
 	float DrawAimShootThickness;
 
+	/** The size of the HitImpact point. */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - Weapon")
 	float DrawImpactSize;
 
+	/** The time in seconds that the aim line remains visible. */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - Weapon")
 	float DrawAimLifeTime;
 
+	/** The time in seconds that the shoot line remains visible. */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - Weapon")
 	float DrawShootLifeTime;
 
+	/** The time in seconds that the impact line remains visible. */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - Weapon")
 	float DrawImpactLifeTime;
 
+	/** The color of the aim line. */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - Weapon")
 	FLinearColor DrawAimColor;
 
+	/** The color of the shoot line. */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - Weapon")
 	FLinearColor DrawShootColor;
 
+	/** The color of the shoot line if it hits target. */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - Weapon")
 	FLinearColor DrawShootColorOnHit;
 
+	/** The color of the impact effect when hitting a surface. */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - Weapon")
 	FLinearColor DrawImpactColor;
 
+	/** The color of the impact effect when hitting a surface and dealing damage. */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "WiseFelineSample - Weapon")
 	FLinearColor DrawImpactColorOnHit;
 
