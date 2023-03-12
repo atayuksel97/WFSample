@@ -4,18 +4,17 @@
 
 #include "CoreMinimal.h"
 #include "WFConsideration.h"
-#include "WFConsideration_MyHealth.generated.h"
+#include "WFConsideration_Health.generated.h"
 
-class UWFHealthComponent;
+class AWFCharacter;
 
 UCLASS(ClassGroup= "WiseFelineSample", DisplayName= "Consideration_MyHealth")
-class WFSAMPLE_API UWFConsideration_MyHealth : public UWFConsideration
+class WFSAMPLE_API UWFConsideration_Health : public UWFConsideration
 {
 	GENERATED_BODY()
 	
 	// CTOR/DTOR & VIRTUAL FUNCTIONS
 public:
-	virtual void OnBeginPlay_Implementation() override;
 	virtual float GetValue_Implementation(const AActor* InTargetActor) override;
 
 #if ENABLE_VISUAL_LOG
@@ -24,5 +23,5 @@ public:
 	
 	// PROPERTIES
 private:
-	TWeakObjectPtr<UWFHealthComponent> HealthComp;
+	TObjectPtr<const AWFCharacter> Character;
 };

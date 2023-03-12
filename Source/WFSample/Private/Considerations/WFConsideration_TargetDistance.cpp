@@ -20,10 +20,3 @@ float UWFConsideration_TargetDistance::GetValue_Implementation(const AActor* InT
 	}
 	return 0.0f;
 }
-
-//---------------------------------------------------------------------------------------
-
-bool UWFConsideration_TargetDistance::IsTargetNeeded_Implementation() const
-{
-	return true;
-}

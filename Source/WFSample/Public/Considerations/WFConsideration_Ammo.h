@@ -4,15 +4,20 @@
 
 #include "CoreMinimal.h"
 #include "WFConsideration.h"
-#include "WFConsideration_PlayerCharacterHealth.generated.h"
+#include "WFConsideration_Ammo.generated.h"
 
-class AWFPlayerCharacter;
+class AWFCharacter;
 
-UCLASS(ClassGroup= "WiseFelineSample", DisplayName= "Consideration_PlayerCharacterHealth")
-class WFSAMPLE_API UWFConsideration_PlayerCharacterHealth : public UWFConsideration
+UCLASS(ClassGroup= "WiseFelineSample", DisplayName= "Consideration_MyAmmo")
+class WFSAMPLE_API UWFConsideration_Ammo : public UWFConsideration
 {
 	GENERATED_BODY()
+
 	// CTOR/DTOR & VIRTUAL FUNCTIONS
 public:
 	virtual float GetValue_Implementation(const AActor* InTargetActor) override;
+
+	// PROPERTIES
+private:
+	TObjectPtr<const AWFCharacter> Character;
 };

@@ -14,7 +14,6 @@ class WFSAMPLE_API UWFConsideration_TargetDistance : public UWFConsideration
 	// CTOR/DTOR & VIRTUAL FUNCTIONS
 public:
 	virtual float GetValue_Implementation(const AActor* InTargetActor) override;
-	virtual bool IsTargetNeeded_Implementation() const override;
 
 	// PROPERTIES
 public:

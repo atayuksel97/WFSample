@@ -19,5 +19,5 @@ public:
 
 	// PROPERTIES
 public:
-	TWeakObjectPtr<AWFCharacter> Character;
+	TObjectPtr<AWFCharacter> Character;
 };

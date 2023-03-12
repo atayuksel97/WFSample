@@ -1,25 +1,22 @@
 ﻿// Fill out your copyright notice in the Description page of Project Settings.
 
-#include "Considerations/WFConsideration_MyAmmo.h"
+#include "Considerations/WFConsideration_Ammo.h"
 #include "WFCharacter.h"
-#include "WFSampleTypes.h"
 #include "WFWeapon.h"
 
 //---------------------------------------------------------------------------------------
 // CTOR/DTOR & VIRTUAL FUNCTIONS
 //---------------------------------------------------------------------------------------
 
-void UWFConsideration_MyAmmo::OnBeginPlay_Implementation()
-{
-	Super::OnBeginPlay_Implementation();
-	Character = Cast<AWFCharacter>(GetControlledActor());
-}
-
-//---------------------------------------------------------------------------------------
-
-float UWFConsideration_MyAmmo::GetValue_Implementation(const AActor* InTargetActor)
+float UWFConsideration_Ammo::GetValue_Implementation(const AActor* InTargetActor)
 {
 	TRACE_CPUPROFILER_EVENT_SCOPE(UWFConsideration_MyAmmo::GetValue_Implementation)
+
+	if (bNeedTarget)
+		Character = Cast<AWFCharacter>(InTargetActor);
+	else
+		Character = Cast<AWFCharacter>(GetControlledActor());
+
 
 	if (IsValid(Character.Get()) && IsValid(Character->Weapon.Get()))
 	{
