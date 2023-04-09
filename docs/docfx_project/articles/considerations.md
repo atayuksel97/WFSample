@@ -60,4 +60,15 @@ You can check the box for having targets in the behavior editor UI for the consi
 
 As you can see this consideration assumes that the consideration is used in an actor which is owned by a controller (usually an AIController).
 
+## Setting curves for considerations
+
+When you use a consideration with an action, you set its curve depending on what the action needs.
+For example if your action needs to consider the distance of the agent with a target, it might want to have a higher score if the target is closer or a lower score if it is closer. It also might want a linear relationship or an exponential one.
+Usually what you want is a curve which goes from 0 to 1 and returns a value between 0 and 1 depending on the shape of the curve, but sometimes you want a boolean curve which returns 0 when the x axis is less than a value or less than or equal a value and 1 otherwise.
+
+![boolean curve](../images/boolean-curve.png)
+
+As you can see you can modify the number which is the border between 0 and 1 and also the operator used to decide what happens to the number around the border.
+
+
 For more information, check the sample and the source code out.
