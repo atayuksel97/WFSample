@@ -75,7 +75,7 @@ A targeted action means all considerations are calculated for all targets which 
 The scores of all actions are calculated once per `WFUtilityAIComponent::EvaluationIntervalTime` and then the highest score action will be selected to run.
 Here you just define how the action will execute and that's it.
 
-When filling the list of targets, you can fill it with actors with whatever method you want. You can use EQS, your own special systems for the game or simple raycast or cahced lists in a manager script. The only important thing is for the list to be accurate and not take much time to generate.
+When filling the list of targets, you can fill it with actors with whatever method you want. You can use EQS, your own special systems for the game or simple raycast or cached lists in a manager script. The only important thing is for the list to be accurate and not take much time to generate.
 
 You don't have to clear and rebuild the list of targets every time either but in that case you should be careful to not add something multiple times and also to remove objects which are not good target candidates as well.
 Also if your action does not need any targets, You don't need to add any targets in `OnUpdateTargets()`.
