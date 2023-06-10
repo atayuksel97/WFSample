@@ -38,4 +38,4 @@ The GamePlay Debugger is also a very helpful tool which at runtime shows scores 
 
 ![GamePlay Debugger](../images/gameplay-debugger.png)
 
-If you need deeper debugging, then you can use the debugger or visual loggere to dig deeper.
+If you need deeper debugging, then you can use the debugger or visual logger to dig deeper.
