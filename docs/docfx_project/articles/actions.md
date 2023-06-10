@@ -45,12 +45,12 @@ void UUAIAction_ActorMoveToTarget::OnUpdateTargets_Implementation()
 		ClearTargetActors();
 		TArray<AActor*> OutActors;
 		UKismetSystemLibrary::SphereOverlapActors(GetWorld(),
-		                                          GetControlledActor()->GetActorLocation(),
-		                                          2000.0f,
-		                                          TArray<TEnumAsByte<EObjectTypeQuery>>{ObjectTypeQuery3},
-		                                          AUAICharacter::StaticClass(),
-		                                          TArray<AActor*>{},
-		                                          OutActors);
+		GetControlledActor()->GetActorLocation(),
+		2000.0f,
+		TArray<TEnumAsByte<EObjectTypeQuery>>{ObjectTypeQuery3},
+		AUAICharacter::StaticClass(),
+		TArray<AActor*>{},
+		OutActors);
 		TargetActors.Append(OutActors);
 	}
 }
