@@ -5,6 +5,8 @@ It also contains the documentation for the plugin itself so you can suggest chan
 
 - [documentation](https://nooparmygames.com/WF-UtilityAI-Unreal)
 - [Our website](https://nooparmygames.com)
+- [Our Discord server](https://discord.gg/FA8R7APZWR)
+- [Support Email](mailto:support@nooparmygames.com)
 
 # Changes/pull requests
 
