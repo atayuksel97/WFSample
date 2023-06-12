@@ -3,6 +3,8 @@
 This repository contains the sample for WiseFeline, our Utility AI plugin for Unreal.
 It also contains the documentation for the plugin itself so you can suggest changes if you feel to do so.
 
+- [Introduction video](https://youtu.be/n-juHwnlZiU)
+- [Why Utility AI is great video](https://youtu.be/GQkb8LFp8YI)
 - [documentation](https://nooparmygames.com/WF-UtilityAI-Unreal)
 - [Our website](https://nooparmygames.com)
 - [Our Discord server](https://discord.gg/FA8R7APZWR)
