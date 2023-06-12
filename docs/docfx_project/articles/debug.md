@@ -16,7 +16,7 @@ You can also sort the list of actions by score.
 
 The window looks like this 
 
-![Debug Window](../images/debug.png)
+![Debug Window](../images/debugger.png)
 
 As you can see the left most column are the actions and then considerations.
 The window updates whenever scores are updated.
@@ -28,8 +28,14 @@ It both prints actions and their scores to the log and the snapshot and also dra
 
 This and in general visual logger are very helpful for reproducing bugs and situations which others ran into, specially because it allows you to move back and forth between recorded frames.
 
+![Visual Logger](../images/vislog.png)
+
 For more information, check Unreal's Visual Logger documentation.
 
 ## Gameplay Debugger
 
-The GamePlay Debugger is also a very helpful tool which at runtime shows scores of your top actions to you so you can see why an AI agent is doing something and not something else and if you need deeper debugging, then you can use the debugger or visual loggere to dig deeper.
+The GamePlay Debugger is also a very helpful tool which at runtime shows scores of your top actions to you so you can see why an AI agent is doing what it is doing and not something else.
+
+![GamePlay Debugger](../images/gameplay-debugger.png)
+
+If you need deeper debugging, then you can use the debugger or visual logger to dig deeper.
