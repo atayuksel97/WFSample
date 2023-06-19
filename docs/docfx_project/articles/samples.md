@@ -3,7 +3,7 @@
 There is a sample in the project with two levels.
 One is pretty simple and without AI controllers and another is a FPS and has lots of actions and considerations with FPS enemies fully made in utility AI.
 
-Download the sample from [here](https://google.com)
+Download the sample from [GitHub.](https://github.com/Shayan-Zamiri/WFSample)
 
 # How to run the demo
 
