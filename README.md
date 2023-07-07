@@ -5,6 +5,8 @@ It also contains the documentation for the plugin itself so you can suggest chan
 
 # Getting Started
 
+You need UnrealEngine 5.1.1 or later to open this sample.
+
 - Clone this repository.
 - Open your Epic games launcher and go to the marketplace tab.
 - Buy and then Install the WiseFeline plugin in your engine.
