@@ -7,10 +7,11 @@ It also contains the documentation for the plugin itself so you can suggest chan
 
 You need UnrealEngine 5.1.1 or later to open this sample.
 
-- Clone this repository.
+- Clone this repository. You should clone it because it uses LFS and getting the zip from github doesn't work.
 - Open your Epic games launcher and go to the marketplace tab.
 - Buy and then Install the WiseFeline plugin in your engine.
 - Double click the `WiseFelineSample.uproject` file to open it in UE.
+- Enable WiseFeline in your plugins if it is not enabled. You can do this in Edit>Plugins menu.
 - Play the openned level.
 
 # Important Links
