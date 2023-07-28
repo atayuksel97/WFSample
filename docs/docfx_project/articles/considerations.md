@@ -50,6 +50,8 @@ float UUAIConsideration_MyAmmo::GetValue_Implementation(const AActor* InTargetAc
 
 Or like this in Blueprint
 
+![Consideration](../images/bpconsideration.png)
+
 `OnBeginPlay()` is called when the consideration is initialized after the `UUtilityAIComponent` component is created or the behavior asset is added to an already existing component at runtime.
 
 `GetValue()` is called whenever the action wants to calculate its score.

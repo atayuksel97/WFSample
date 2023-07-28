@@ -57,6 +57,10 @@ void UUAIAction_ActorMoveToTarget::OnUpdateTargets_Implementation()
 
 ```
 
+Here is an action in blueprint.
+
+![Action](../images/bpaction.png)
+
 There are several things to note:
 
 First of all there are two types of actions, targeted and none-targeted. Targeted ones are those which work on a target like shoot and eat pack. This action is targeted.
